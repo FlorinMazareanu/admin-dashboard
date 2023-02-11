@@ -2,10 +2,11 @@ body {
     margin: 0px;
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
 }
 .page-container {
     display: grid;
-    background-color: aquamarine;
     width: 100%;
     height: 100%;
     grid-template-areas: 
@@ -13,11 +14,60 @@ body {
     "sidebar main main"
     "sidebar main main";
     grid-template-columns: 15vw auto auto;
-    grid-template-rows: 20vh auto;
+    grid-template-rows: 15vh 85vh;
 }
 .sidebar {
     background-color: #1992D4;
     grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+    padding-top: 2rem;
+}
+.sidebar-dashboard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.dashboard-text-container {
+    padding-left: 1rem;
+}
+.dashboard-text-container:hover {
+    color: white;
+}
+.dashboard-img-container {
+    height: 80px;
+    width: 80px;
+}
+.dashboard-img-container .dashboard-img {
+    width: 100%;
+    height: 100%;
+}
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+.sidebar-menu-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.sidebar-img-container {
+    height: 30px;
+    width: 30px;
+}
+.sidebar-img {
+    height: 100%;
+    width: 100%;
+}
+.sidebar-text {
+    padding-left: 1rem;
+}
+.sidebar-text:hover {
+    color: white;
 }
 .header {
  background-color: #FFFFFF;
@@ -31,19 +81,18 @@ body {
  "proectsTitle announcementsTitle"
  "projects announcementsTrending";
  grid-template-columns: 2fr 1fr;
- grid-template-rows: 10% 90%;
+ grid-template-rows: 5% auto;
 }
 .projectstitle {
-    background-color: lightseagreen;
     grid-area: proectsTitle;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: flex-start;
 }
 .projectstitle h2 {
     margin-left: 2rem;
 }
 .projects {
-    background-color: aqua;
     grid-area: projects;
     display: grid;
     grid-template-areas:
@@ -54,48 +103,87 @@ body {
     grid-template-rows: 1fr 1fr 1fr;
 }
 .project {
-    border: 1px solid red;
     margin-left: 2rem;
     margin-bottom: 2rem;
+    background-color: white;
+    border-left: 0.5rem solid #F0B429;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    padding-right: 2rem;
+    padding-left: 1rem;
+}
+.project-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+}
+.project-images {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.project-img-container {
+    height: 2rem;
+    width: 2rem;
+    margin: 0.5rem;
 }
 .announcementsTitle {
-    background-color: darkolivegreen;
     grid-area: announcementsTitle;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: flex-start;
 }
 .announcementsTitle h2 {
     margin-left: 2rem;
 }
 .announcementsTrending {
     grid-area: announcementsTrending;
-    background-color: aquamarine;
     display: grid;
     grid-template-areas:
     "accouncements"
     "trendingTitle"
     "trending";
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 10% 1fr;
+    grid-template-rows: 45% 10% 45%;
 }
 .announcements {
-    border: 1px solid red;
     grid-area: accouncements;
     margin-left: 2rem;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+    background-color: white;
+    border-left: 0.5rem solid #F0B429;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    padding-right: 2rem;
+    padding-left: 1rem;
+}
+.announcements-section br {
+    font-size: 2rem;
+    color: black;
 }
 .trendingTitle {
-    background-color: darkgreen;
-    border: 1px solid red;
     grid-area: trendingTitle;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: flex-start;
 }
 .trendingTitle h2 {
     margin-left: 2rem;
 }
 .trending {
-    border: 1px solid red;
     grid-area: trending;
     margin-left: 2rem;
     margin-bottom: 2rem;
+    margin-right: 2rem;
+    background-color: white;
+    border-left: 0.5rem solid #F0B429;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    padding-right: 2rem;
+    padding-left: 1rem;
 }
+
